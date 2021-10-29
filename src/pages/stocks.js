@@ -32,14 +32,14 @@ const Stocks = (props) => {
             return(
                 
                 
-                    <tr key={index}>
-                        <td className="left-align"><Link to={`/stocks/${ele.ticker}`}>
+                    <tr className={index % 2 === 0 ? "even" : "odd"} key={index}>
+                        <td className="left-align radius-3"><Link className="black-text" to={`/stocks/${ele.ticker}`}>
                         {ele.companyName}
                         </Link>
                         </td>
-                        <td>{ele.ticker}</td>
-                        <td>{ele.price}</td>
-                        <td>{ele.changesPercentage}</td>
+                        <td className="radius-3">{ele.ticker}</td>
+                        <td className="radius-3">{ele.price}</td>
+                        <td className="radius-3">{ele.changesPercentage}</td>
                     </tr>
                 
             )
@@ -56,21 +56,30 @@ const Stocks = (props) => {
 
 
 
+    const loaded = () =>{
+        return(
+            <div>
+            <table>
+            <thead>
+                <th className="left-align radius-3">Company</th>
+                <th className="radius-3">Symbol</th>
+                <th className="radius-3">Price</th>
+                <th className="radius-3">% Change</th>
+            </thead>
+            <tbody>
+            {stocks}
+            </tbody>
+        </table>
+            </div>
+        )
+    }
+
+    const loading = ()=>{
+        <h1>Loading Content</h1>
+    }
 
   return (
-      <div>
-    <table>
-    <thead>
-        <th className="left-align">Company</th>
-        <th>Symbol</th>
-        <th>Price</th>
-        <th>% Change</th>
-    </thead>
-    <tbody>
-    {stocks}
-    </tbody>
-</table>
-    </div>
+    stocks ? loaded() : loading()
   )
 };
 
