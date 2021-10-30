@@ -10,7 +10,7 @@ const CircleImage = (props) =>{
         setMyClass(props.baseClass)
     }
     return(
-        <img className={myClass} src={props.content} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}/>
+        <img className={myClass} src={props.content} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} alt="Company Logo"/>
     )
 }
 

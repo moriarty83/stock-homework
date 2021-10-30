@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ADADAD;
+  background-color: whitesmoke;
 }
 
 code {
@@ -39,6 +39,19 @@ code {
   color: black;
 }
 
+.gray-text{
+  color: whitesmoke;
+}
+
+.white-text{
+  color: white;
+}
+
+.bold{
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
 .left-align{
   text-align: left;
 }
@@ -65,6 +78,7 @@ th {
 td{
   
   padding: 3px 5px 3px 5px;
+  color: whitesmoke;
   
 }
 
@@ -84,22 +98,22 @@ td{
 
 .bkground-1{
   background-color: #2e1114;
-  color: #adadad
+  color: whitesmoke
 }
 
 .bkground-2{
   background-color: #501b1d;
-  color: #adadad
+  color: whitesmoke
 }
 
 .bkground-3{
   background-color: #64485c;
-  color: #adadad
+  color: whitesmoke
 }
 
 .bkground-4{
   background-color: #83677b;
-  color: #adadad
+  color: whitesmoke
 }
 
 .flex{

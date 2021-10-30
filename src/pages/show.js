@@ -1,6 +1,6 @@
 import React from "react";
 import backupData from "../backupData";
-import { Link } from "react-router-dom";
+
 import Circle from "../components/circle";
 import CircleImage from "../components/circleImage";
 
@@ -75,6 +75,14 @@ const Show = (props) => {
         getStock();
     }, []);
     
+    const loaded = ()=>{
+
+    }
+
+    const loading = ()=>{
+        
+    }
+
   return (
     <>
     {message}

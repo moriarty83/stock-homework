@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import {Route, Switch} from 'react-router'
 import './App.css';
 import Nav from './components/nav';
@@ -14,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
+      <Nav apiKey={apiKey}/>
       <Switch>
         <Route exact path="/">
           <Main />
