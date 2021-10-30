@@ -56,10 +56,12 @@ const Stocks = (props) => {
             <div>
             <table>
             <thead>
+                <tr>
                 <th className="left-align radius-3">Company</th>
                 <th className="radius-3">Symbol</th>
                 <th className="radius-3">Price</th>
                 <th className="radius-3">% Change</th>
+                </tr>
             </thead>
             <tbody>
             {stockElements}
