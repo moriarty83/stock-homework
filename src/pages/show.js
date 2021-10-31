@@ -80,7 +80,7 @@ const Show = (props) => {
     }
 
     const loading = ()=>{
-        
+
     }
 
   return (

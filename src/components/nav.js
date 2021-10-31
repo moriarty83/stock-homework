@@ -8,23 +8,10 @@ import Hamburger from "./hamburger";
 
 const Nav = (props) => {
 
-    const formRef = React.useRef();
-    const history = useHistory();
 
-    const [form, setForm] = useState({symbol: ''})
 
-    const [redirect, setRedirect] = useState();
 
-    function handleChange(event){
-        setForm({...form, [event.target.name]: event.target.value});
-      }
-    
-    const handleSubmit = (event)=>{
-        event.preventDefault();
-        const symbol = form.symbol;
-        history.push(`/stocks/${symbol}`)
-        setForm({symbol: ''})
-    }
+
     return (
         <div className="nav">
             <Hamburger />
@@ -37,10 +24,10 @@ const Nav = (props) => {
             <Link className="nav-link" to="/stocks">
                 <div>Stocks</div>
             </Link>
-            <form className="nav-link" onSubmit={handleSubmit} ref={formRef}>
-                <input type="text" name="symbol" id="symbol" value={form.symbol} onChange={handleChange}/>
-                <input type="submit" value="Lookup" />
-            </form>
+            <Link className="nav-link" to="/search">
+                <div>Search</div>
+            </Link>
+
             
         </div>
     )

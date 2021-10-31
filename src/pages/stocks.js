@@ -39,7 +39,9 @@ const Stocks = (props) => {
 
     const loaded = () =>{
         const stockElements = stocks.map((ele,index)=>{
+            
             return(
+                
                     <tr className={index % 2 === 0 ? "even" : "odd"} key={index}>
                         <td className="left-align radius-3"><Link className="white-text bold" to={`/stocks/${ele.ticker}`}>
                         {ele.companyName}

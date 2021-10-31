@@ -24,6 +24,9 @@ const Hamburger = (props) =>{
                     <Link to="/stocks">
                         <div>Stocks</div>
                     </Link>
+                    <Link to="/search">
+                        <div>Search</div>
+                    </Link>
                 </div>
         </div>
     )
